@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <h1> CyberSecurity Club </h1> 
+    
   </div>
 </template>
