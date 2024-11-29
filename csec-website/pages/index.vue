@@ -6,7 +6,7 @@
         <Home></Home>
 
         <template #footer>
-            
+
         </template>
     </UCard>
 
