@@ -1,8 +1,12 @@
 
 <template>
-  <div>
+    <div>
+    <!-- Nav bar -->
+    <navbar></navbar>
+
+    <!-- Component screens -->
     <Home></Home>
 
-    
-  </div>
+    <!-- Footer -->
+    </div>
 </template>
