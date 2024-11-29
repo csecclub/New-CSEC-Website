@@ -1,6 +1,8 @@
+
 <template>
   <div>
-    <h1> CyberSecurity Club </h1> 
+    <Home></Home>
+
     
   </div>
 </template>
