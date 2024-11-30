@@ -1,13 +1,16 @@
 # New-CSEC-Website
 
-
-Dependencies:
+### Dependencies:
 * Nuxt v3.14
+* NuxtUI
 * bun [packagemanager]
 
 
-Full documentation is available at https://bun.sh/docs/cli/run
 
+Full documentation is available at https://bun.sh/docs/cli/run
+* to update everything run
+``` bun install ```
+```
 package.json scripts (5 found):
   $ bun run build
     nuxt build
@@ -23,3 +26,4 @@ package.json scripts (5 found):
 
   $ bun run postinstall
     nuxt prepare
+```
