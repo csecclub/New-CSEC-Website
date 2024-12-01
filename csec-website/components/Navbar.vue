@@ -30,5 +30,8 @@
 <!-- Icons to choose from https://icones.js.org/ -->
 
 <template>
-    <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
+    <div class="flex">
+        <img src="/public/cseclogo.png" class="h-12"></img>
+        <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
+    </div>
 </template>
