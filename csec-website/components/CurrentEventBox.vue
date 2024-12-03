@@ -5,6 +5,7 @@ import xml2js from 'xml2js';
 
 interface Event {
   title: string;
+  description: string;
   link: string;
 }
 
@@ -30,6 +31,7 @@ const FeedParser = defineComponent({
           data.title.forEach((entry: any) => {
             const event: Event = {
               title: entry.$.title,
+              description: entry.$.description,
               link: entry.$.link,
             };
             events.value.push(event);
@@ -52,11 +54,16 @@ export default FeedParser;
 <template>
    <div>
       <h1>Upcoming Events</h1>
-      <ul>
+      <!-- check if there are any events -->
+      <ul v-if="events.length > 0" :key="index">
+
+         <!-- Display a block telling the user the event and giving a link to it -->
          <li v-for="(event, index) in events" :key="index">
             {{ event.title }}
             <a :href="event.link">{{ event.title }}</a>
          </li>
       </ul>
+      <!-- No events upcoming so we tell our user -->
+      <p v-else>No upcoming events found.</p>
    </div>
 </template>
