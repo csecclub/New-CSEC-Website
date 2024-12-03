@@ -1,4 +1,16 @@
+<script setup lang="ts">
+</script>
+
 <template>
-    <h1>Calendar</h1>
-    
+    <UCard >
+        <Navbar></Navbar>
+        
+        <CurrentEventBox></CurrentEventBox>
+
+        <div class="flex-grow"></div>
+
+        <template #footer>
+            <Footer></Footer>
+        </template>
+    </UCard>
 </template>
