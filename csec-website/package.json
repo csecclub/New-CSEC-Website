@@ -12,8 +12,11 @@
   "dependencies": {
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "2.19.2",
+    "axios": "^1.7.8",
     "nuxt": "^3.14.1592",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "xml2js": "^0.6.2",
+    "xmldom": "^0.6.0"
   }
 }
