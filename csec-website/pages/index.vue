@@ -3,9 +3,7 @@
         <!-- NavBar acts as a header -->
         <Navbar></Navbar>
 
-        <Home class="flex-grow"></Home>
-
-        <div class="flex-grow"></div>
+        <Home></Home>
 
         <template #footer>
             <Footer></Footer>
