@@ -25,10 +25,6 @@ const items = [
         description: 'Cybersecurity Clubs First meeting Fall 2024'
     },
     {
-        src: 'csecPastEvents/sabre1.png',
-        description: 'Penetration testing workshop lead by cybersecurity professionals from Sabre'
-    },
-    {
         src: 'csecPastEvents/tanium1.jpg',
         description: 'Cybersecurity with Tanium, a top firm in the field of Cybersecurity and IT systems management'
     },    
@@ -55,20 +51,20 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full max-w-6xl mx-auto">
-        <client-only>
-            <UCarousel 
-                ref="carouselRef"
-                v-slot="{ item }" 
-                :items="items" 
-                :ui="{ item: 'basis-full' }" 
-                class="w-full rounded-lg overflow-hidden"
-            > 
-                <div>
-                    <img :src="item.src" class="w-full h-auto object-cover" draggable="false">
-                    <p>{{ item.description }}</p>
-                </div>
-            </UCarousel>
-        </client-only>
+    <div class="w-full max-w-5xl mx-auto">
+        <UCarousel 
+            ref="carouselRef"
+            v-slot="{ item }" 
+            :items="items" 
+            :ui="{ item: 'basis-full' }" 
+            class="w-full rounded-lg overflow-hidden"
+        > 
+            <div>
+                <img :src="item.src" class="w-full h-auto object-cover" draggable="false">
+                
+                <div></div>
+                <p class="text-lg my-4">{{ item.description }}</p>
+            </div>
+        </UCarousel>
     </div>
 </template>
