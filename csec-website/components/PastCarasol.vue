@@ -62,7 +62,6 @@ onMounted(() => {
             <div>
                 <img :src="item.src" class="w-full h-auto object-cover" draggable="false">
                 
-                <div></div>
                 <p class="text-lg my-4">{{ item.description }}</p>
             </div>
         </UCarousel>

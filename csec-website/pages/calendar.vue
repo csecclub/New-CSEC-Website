@@ -2,15 +2,7 @@
 </script>
 
 <template>
-    <UCard >
-        <Navbar></Navbar>
-        
-        <CurrentEventBox></CurrentEventBox>
+    
+    <CurrentEventBox></CurrentEventBox>
 
-        <div class="flex-grow"></div>
-
-        <template #footer>
-            <Footer></Footer>
-        </template>
-    </UCard>
 </template>
