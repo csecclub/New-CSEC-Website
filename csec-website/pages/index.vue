@@ -1,13 +1,5 @@
 <template>
-    <UCard>
-        <!-- NavBar acts as a header -->
-        <Navbar></Navbar>
-
-        <Home></Home>
-
-        <template #footer>
-
-        </template>
-    </UCard>
+    <!-- NavBar acts as a header -->
+    <Home></Home>
 
 </template>
