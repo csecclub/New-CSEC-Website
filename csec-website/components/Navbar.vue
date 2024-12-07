@@ -33,9 +33,9 @@
     <div class="flex">
         <!-- CSEC logo -->
         <img src="/public/cseclogo.png" class="h-12"></img>
-        
+
         <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800">
-            <!-- Custom slots (purpose for mobile) -->
+            <!-- Custom slots to make mobile look easier -->
             <template #default="{ link }">
                 <div class="flex items-center space-x-2">
                     <!-- Always show icon -->
