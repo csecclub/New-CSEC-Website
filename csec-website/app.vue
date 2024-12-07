@@ -1,6 +1,6 @@
 
 <template>
-    <UCard class="w-screen h-screen flex flex-col justify-between overflow-hidden">
+    <UCard class="w-screen h-screen flex flex-col justify-between overflow-y-auto">
         <Navbar />
 
         <NuxtPage class=""/>

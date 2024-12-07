@@ -1,5 +1,5 @@
 <template>
     <!-- NavBar acts as a header -->
-    <Home></Home>
+    <Home class=""></Home>
 
 </template>
