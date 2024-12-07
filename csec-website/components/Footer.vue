@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <footer class="w-full mt-auto py-4 flex flex-col space-x-3 items-center">
+    <footer class="w-full mt-auto -py-8 flex flex-col space-x-3 ">
         <div class="h-8 flex space-x-3 ">
             <!-- its the official CSEC -->
             <p>CSEC &copy; {{ currentYear }} </p>
