@@ -1,15 +1,7 @@
 <template>
-    <UCard>
-        <!-- NavBar acts as a header -->
-        <Navbar></Navbar>
 
-        <h1>CSEC's Past Events</h1>
+    <h1 class="flex justify-center text-2xl py-3">CSEC's Past Events</h1>
 
-        <PastCarasol></PastCarasol>
-
-        <template #footer>
-
-        </template>
-    </UCard>
+    <PastCarasol></PastCarasol>
 
 </template>
