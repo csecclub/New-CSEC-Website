@@ -31,7 +31,20 @@
 
 <template>
     <div class="flex">
+        <!-- CSEC logo -->
         <img src="/public/cseclogo.png" class="h-12"></img>
-        <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
+
+        <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800">
+            <!-- Custom slots to make mobile look easier -->
+            <template #default="{ link }">
+                <div class="flex items-center space-x-2">
+                    <!-- Always show icon -->
+                    <i :class="link.icon"></i>
+                    <!-- Hide text on mobile, show on md and larger screens -->
+                    <span class="hidden md:inline group-hover:text-primary relative">{{ link.label }}</span>
+                </div>
+            </template>
+
+        </UHorizontalNavigation>
     </div>
 </template>
