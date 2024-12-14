@@ -27,12 +27,13 @@
           <img 
             class="max-w-xs object-scale-down md:ml-6 mt-6 md:mt-0 drop-shadow-lg" 
             src="~/assets/michi.png" 
+            
             alt="Michi Mascot"
           />
         </div>
   
         <!-- Divider -->
-        <hr class="my-8 border-gray-300" />
+        <UDivider></UDivider>
   
         <!-- Additional Links -->
         <h3 class="text-2xl font-semibold mb-4">Check out our other websites!</h3>
@@ -52,6 +53,13 @@
             CTF-Playground
           </UButton>
         </div>
+
+        <!-- Divid to email section -->
+        <UDivider class="py-10"></UDivider>
+
+        <!-- Form to send an email to csec -->
+        <EmailForm></EmailForm>
+
       </div>
     </div>
   </template>

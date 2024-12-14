@@ -16,7 +16,7 @@ export default {
         case 'gold':
           return 'text-yellow-500'
         case 'silver':
-          return 'text-gray-300'
+          return 'text-gray-400'
         case 'bronze':
           return 'text-orange-700'
         default:
@@ -34,7 +34,7 @@ export default {
     <div class="max-w-screen-xl mx-auto px-4 py-8">
   
       <!-- UCard takes full width within container -->
-      <UCard class="w-full p-4 bg-white dark:bg-gray-800 shadow-md rounded">
+      <UCard class="w-full p-4 bg-slate-100 dark:bg-gray-800 shadow-md rounded">
         <!-- 
           Flex container:
           - flex-col on mobile
