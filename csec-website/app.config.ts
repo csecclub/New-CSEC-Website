@@ -1,7 +1,7 @@
 export default defineAppConfig({
     ui: {
         primary: 'blue',
-        gray: 'sky',
+        gray: 'slate',
 
         button: {
             default: {
