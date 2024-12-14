@@ -5,8 +5,6 @@
 * NuxtUI
 * bun [packagemanager]
 
-
-
 Full documentation is available at https://bun.sh/docs/cli/run
 * to update everything run
 ``` bun install ```
@@ -27,3 +25,7 @@ package.json scripts (5 found):
   $ bun run postinstall
     nuxt prepare
 ```
+
+### Good resource to help dev
+
+* https://www.creative-tim.com/twcomponents/cheatsheet/
