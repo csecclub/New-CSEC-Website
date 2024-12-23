@@ -5,6 +5,11 @@
 * NuxtUI
 * bun [packagemanager]
 
+To easily install bun run: 
+```
+npm install -g bun
+```
+
 Full documentation is available at https://bun.sh/docs/cli/run
 * to update everything run
 ``` bun install ```
