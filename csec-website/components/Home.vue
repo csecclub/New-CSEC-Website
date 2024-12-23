@@ -36,7 +36,7 @@
         <UDivider></UDivider>
   
         <!-- Additional Links -->
-        <h3 class="text-2xl font-semibold mb-4">Check out our other websites!</h3>
+        <h3 class="text-2xl font-semibold mb-4 py-5">Check out our other websites!</h3>
         <div class=" flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <UButton 
             to="https://csecnote.utacsec.com"
@@ -54,11 +54,17 @@
           </UButton>
         </div>
 
+
         <!-- Divid to email section -->
         <UDivider class="py-10"></UDivider>
 
         <!-- Form to send an email to csec -->
         <EmailForm></EmailForm>
+
+         <!-- Divid to about section -->
+         <UDivider class="py-10"></UDivider>
+
+        <AboutUs></AboutUs>
 
       </div>
     </div>
