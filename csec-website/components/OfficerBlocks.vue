@@ -4,20 +4,16 @@ export default {
   data() {
     return {
       officers: [
-        { name: 'Rose', role: 'President @ CSEC', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Betim', role: 'Vice President @ CSEC', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Rose', role: 'President @ CSEC', image: 'csecOfficers/Rose.jpg' },
+        { name: 'Betim', role: 'Vice President @ CSEC', image: 'csecOfficers/Betim.jpg' },
         { name: 'Christian', role: 'Treasuer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Richard', role: 'Treasure Trainee', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Nicole', role: 'Secretary', image: 'csecOfficers/HackerCat.png' },
         { name: 'Rohita', role: 'Fundraising Director', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Jeremiah', role: 'Technical Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Brett', role: 'Event Planner', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Jeremiah', role: 'Research Officer', image: 'csecOfficers/Jeremiah.jpg' },
+        { name: 'Brett', role: 'Graphic Design Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Summer', role: 'Event Coordinator', image: 'csecOfficers/HackerCat.png' },
         { name: 'Buzz', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Gino', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Isabel', role: 'Graphical Design Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Phillip', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Josh', role: 'Jr. Web Dev', image: 'csecOfficers/HackerCat.png' },
         { name: 'Tej', role: 'Jr Web Dev', image: 'csecOfficers/HackerCat.png' },
         { name: 'Safal', role: 'Recuritment Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Wesly', role: 'MemberShip Officer', image: 'csecOfficers/HackerCat.png' },
@@ -42,7 +38,7 @@ export default {
         >
             <!-- Officer rendered data here -->
             <div class="h-32 rounded-full flex flex-col items-center justify-center mb-4">
-                <img v-if="officer.image" :src="officer.image" :alt="officer.name" class="w-32 h-32 object-fill object-center" />
+                <img v-if="officer.image" :src="officer.image" :alt="officer.name" class="w-32 h-32 object-fill object-center rounded-full" />
                 <div v-else class="flex items-center justify-center">
                     <UAvatar icon="i-heroicons-photo" size="3xl" />
                 </div>
