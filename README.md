@@ -1,36 +1,50 @@
 # New-CSEC-Website
 
-### Dependencies:
-* Nuxt v3.14
-* NuxtUI
-* bun [packagemanager]
+## Overview
 
-To easily install bun run: 
-```
-npm install -g bun
-```
+New-CSEC-Website is a modern web application built using Nuxt.js and NuxtUI. It leverages the power of bun as a package manager to streamline development and build processes.
 
-Full documentation is available at https://bun.sh/docs/cli/run
-* to update everything run
-``` bun install ```
-```
-package.json scripts (5 found):
-  $ bun run build
-    nuxt build
+## Getting Started
 
-  $ bun run dev
-    nuxt dev
+To get started with the project, follow these steps:
 
-  $ bun run generate
-    nuxt generate
+1. Clone the repository:
 
-  $ bun run preview
-    nuxt preview
+  ```sh
+  git clone https://github.com/yourusername/New-CSEC-Website.git
+  cd New-CSEC-Website
+  ```
 
-  $ bun run postinstall
-    nuxt prepare
-```
+2. Install dependencies using bun:
 
-### Good resource to help dev
+  ```sh
+  bun install
+  ```
+
+3. Run the development server:
+
+  ```sh
+  bun run dev
+  ```
+
+4. Open your browser and navigate to `http://localhost:3000` to see the application in action.
+
+## Scripts
+
+The following scripts are available in the project:
+
+- **Build the project**: `bun run build`
+- **Run the development server**: `bun run dev`
+- **Generate static files**: `bun run generate`
+- **Preview the production build**: `bun run preview`
+- **Prepare the project**: `bun run postinstall`
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 * https://www.creative-tim.com/twcomponents/cheatsheet/
