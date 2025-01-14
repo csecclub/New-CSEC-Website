@@ -14,6 +14,7 @@ export default {
         { name: 'Summer Barnes', role: 'Event Coordinator', image: 'csecOfficers/SummerBarnes.jpeg' },
         { name: 'Buzz', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Phillip', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Fawaz', role: 'Jr Web Dev', image: 'csecOfficers/HackerCat.png' },
         { name: 'Tej', role: 'Jr Web Dev', image: 'csecOfficers/HackerCat.png' },
         { name: 'Safal', role: 'Recuritment Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Wesly', role: 'MemberShip Officer', image: 'csecOfficers/HackerCat.png' },
