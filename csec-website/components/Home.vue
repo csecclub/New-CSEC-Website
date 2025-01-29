@@ -52,6 +52,13 @@
           >
             CTF-Playground
           </UButton>
+          <UButton 
+            to="/clawmachine"
+            variant="outline"
+            class=" font-medium py-2 px-4 rounded shadow-sm transition"
+          >
+            Claw-Machine
+          </UButton>
         </div>
 
         <!-- Divid to email section -->
