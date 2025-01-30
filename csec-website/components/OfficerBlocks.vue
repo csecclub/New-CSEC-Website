@@ -7,7 +7,7 @@ export default {
         { name: 'Rose', role: 'President @ CSEC', image: 'csecOfficers/Rose.jpg' },
         { name: 'Betim', role: 'Vice President @ CSEC', image: 'csecOfficers/Betim.jpg' },
         { name: 'Christian', role: 'Treasuer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Richard', role: 'Treasure Trainee', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Richard', role: 'Treasurer Trainee', image: 'csecOfficers/HackerCat.png' },
         { name: 'Rohita', role: 'Fundraising Director', image: 'csecOfficers/HackerCat.png' },
         { name: 'Jeremiah', role: 'Research Officer', image: 'csecOfficers/Jeremiah.jpg' },
         { name: 'Araohat', role: 'Research Officer', image: 'csecOfficers/HackerCat.png' },
