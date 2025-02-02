@@ -9,33 +9,54 @@ interface Event {
   link: string;
 }
 
+const CLUB_KEYWORDS = [
+  'cybersecurity club',
+  'cyber security club',
+  'csec',
+  'CSEC',
+  'Cybersecurity club',
+  'CyberSecurity club',
+  'CyberSecurity Club',
+]
+
 const FeedParser = defineComponent({
   setup() {
     const events = ref<Array<Event>>([]);
 
+    
+    function isClubEvent(event: Event): boolean {
+      const lowerTitle = event.title.toLocaleLowerCase();
+      const lowerDescription = event.description.toLocaleLowerCase();
+
+      return CLUB_KEYWORDS.some(keyword =>
+        lowerTitle.includes(keyword) || lowerDescription.includes(keyword)
+      );
+    }
+
     async function fetchFeed() {
       try {
-        const response = await axios.get('https://mavengage.uta.edu/events');
+        const response = await axios.get('https://mavengage.uta.edu/events.rss');
         const xml = response.data;
 
         const parser = new xml2js.Parser();
-        let data: any;
 
         parser.parseString(xml, (err, result) => {
           if (err) {
+            console.error('XML parsing error:', err);
             return;
           }
-          data = result.rss.channel[0];
+          
+          const channel = result.rss.channel[0];
+          const items = channel.item || [];
 
-          events.value = [];
-          data.title.forEach((entry: any) => {
-            const event: Event = {
-              title: entry.$.title,
-              description: entry.$.description,
-              link: entry.$.link,
-            };
-            events.value.push(event);
-          });
+          // map itme
+          events.value = items.map((item: any) => ({
+            title: item.title?.[0] || 'no title',
+            description: item.description?.[0] || '',
+            link: item.link?.[0] || '#'
+          }))
+          .filter(isClubEvent);
+          
         });
       } catch (error) {
         console.error('Error fetching feed:', error);
@@ -52,18 +73,45 @@ export default FeedParser;
 </script>
 
 <template>
-   <div>
-      <h1>Upcoming Events</h1>
-      <!-- check if there are any events -->
-      <ul v-if="events.length > 0" :key="index">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+      Upcoming Cybersecurity Club Events
+    </h1>
 
-         <!-- Display a block telling the user the event and giving a link to it -->
-         <li v-for="(event, index) in events" :key="index">
+    <div v-if="events.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div 
+        v-for="(event, index) in events" 
+        :key="index"
+        class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-md transition-shadow duration-300 p-6"
+      >
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
             {{ event.title }}
-            <a :href="event.link">{{ event.title }}</a>
-         </li>
-      </ul>
-      <!-- No events upcoming so we tell our user -->
-      <p v-else>No upcoming events found.</p>
-   </div>
+          </h2>
+
+          <div class="prose prose-sm dark:prose-invert text-gray-600 dark:text-gray-300" 
+               v-html="event.description">
+          </div>
+
+          <UButton
+            :to="event.link"
+            target="_blank"
+            color="primary"
+            variant="solid"
+            class="mt-4 w-full"
+            label="View Event Details"
+            icon="i-heroicons-arrow-right-20-solid"
+            trailing
+          />
+        </div>
+      </div>
+    </div>
+
+    <div v-else class="text-center py-12">
+      <p class="text-gray-500 dark:text-gray-400 text-lg">
+        No upcoming events found. Check back later!
+      </p>
+    </div>
+  </div>
 </template>
+
