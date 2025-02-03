@@ -16,6 +16,11 @@
         to: '/calendar'
     }, 
     {
+        label: 'Blog',
+        icon: 'mdi:pencil-box',
+        to: '/blogs'
+    }, 
+    {
         label: 'Past Events',
         icon: 'material-symbols:calendar-clock',
         to: '/events'
