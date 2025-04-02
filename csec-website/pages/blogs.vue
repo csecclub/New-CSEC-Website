@@ -9,7 +9,7 @@
         class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
       >
         <div class="cursor-pointer" @click="togglePost(post.slug)">
-          <h2 class="text-2xl font-bold dark:text-white">{{ post.title }}</h2>
+          <h2 class="text-2xl dark:text-white">{{ post.title }}</h2>
           <p class="text-gray-600 dark:text-gray-300 mt-2">
             {{ formatDate(post.date) }}
           </p>
@@ -26,50 +26,58 @@
 </template>
 
 <script>
-import { marked } from 'marked'
+import { marked } from 'marked';
 
 export default {
   data() {
     return {
       posts: [],
       expandedPost: null
-    }
+    };
   },
   async mounted() {
-    // Get all blog files using static import
-    const files = import.meta.glob('~/blogs/*.md', { eager: true, as: 'raw' })
-    
+    // Get all blog files (Markdown or HTML)
+    const files = import.meta.glob('~/blogs/*.{md,html}', { eager: true, as: 'raw' });
+
     this.posts = Object.entries(files).map(([path, content]) => {
       // Extract filename from path
-      const filename = path.split('/').pop().replace('.md', '')
+      const filename = path.split('/').pop().replace(/\.(md|html)$/, '');
       
-      // Parse date and title from filename (YYYY-MM-DD-slug)
-      const [dateStr, ...slugParts] = filename.split('-')
-      const title = slugParts.join('-')
-        .replace(/-/g, ' ')
-        .replace(/\b\w/g, l => l.toUpperCase())
+      // Parse date and title from filename (YYYY-MM-DD-slug), if present
+      const parts = filename.split('-');
+      let dateStr = null;
+      let title = filename;
+      if (parts.length >= 3 && /^\d{4}-\d{2}-\d{2}$/.test(`${parts[0]}-${parts[1]}-${parts[2]}`)) {
+        dateStr = `${parts[0]}-${parts[1]}-${parts[2]}`;
+        title = parts.slice(3).join('-'); // Raw slug, no formatting
+      }
+
+      // Process content based on file type
+      const isMarkdown = path.endsWith('.md');
+      const processedContent = isMarkdown ? marked.parse(content) : content;
 
       return {
         slug: filename,
-        title,
-        date: new Date(dateStr),
-        content: marked.parse(content)
-      }
-    }).sort((a, b) => b.date - a.date)
+        title: title, // Use raw title, no capitalization
+        date: dateStr ? new Date(dateStr) : null, // Null if no date
+        content: processedContent
+      };
+    }).sort((a, b) => (b.date || 0) - (a.date || 0)); // Sort, handle null dates
   },
   methods: {
     togglePost(slug) {
-      this.expandedPost = this.expandedPost === slug ? null : slug
+      this.expandedPost = this.expandedPost === slug ? null : slug;
     },
     formatDate(date) {
+      if (!date || isNaN(date.getTime())) return 'Date Not Available';
       return date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style>
