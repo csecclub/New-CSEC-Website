@@ -1,6 +1,13 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/ui']
-})
+export default {
+  modules: [
+    '@nuxt/content',
+    '@nuxt/ui' // If you're using NuxtUI
+  ],
+  content: {
+    // Optional configuration
+    markdown: {
+      remarkPlugins: [],
+      rehypePlugins: []
+    }
+  }
+}

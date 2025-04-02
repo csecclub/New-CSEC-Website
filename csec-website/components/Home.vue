@@ -1,50 +1,66 @@
-
 <template>
-    <!-- overall want a col based structure -->
-    <div class="flex-col">
-
-        <!-- Group these two elements together -->
-        <div class="flex justify-between">
+    <div class=" flex flex-col items-center">
+      
+      <!-- Main container -->
+      <div class="max-w-4xl w-full px-6 py-10">
+        
+        <!-- Header section -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+          
+          <!-- Text section -->
+          <div class="mb-6 md:mb-0">
+            <h1 class="text-4xl font-extrabold mb-1">CSEC</h1>
+            <h3 class="text-xl font-medium mb-4">UTA's Ethical CyberSecurity Club</h3>
             
-            <div class="py-5">
-                <h1 class="text-4xl py-1">CSEC</h1>
-                <h3 class="text-xl">UTA's Ethical CyberSecurity Club</h3>
-
-
-                <!-- up to date button -->
-                <div class="">
-                    <p class="py-2">
-                        Stay up to date by joinging our discord server!
-                    </p>
-                    
-                    <!-- Discord Link button -->
-                    <!-- https://ui.nuxt.com/components/button -->
-                    <UButton 
-                        icon="ic:baseline-discord" 
-                        to="https://discord.gg/gPTZJVCFX8"
-                        size="lg"
-                        >
-                        Join our Discord
-                    </UButton>
-                </div>
-
-                
-            </div>
+            <p class="mb-3">Stay up to date by joining our Discord server!</p>
+            <UButton 
+              icon="ic:baseline-discord" 
+              to="https://discord.gg/gPTZJVCFX8"
+              size="lg"
+              class="font-semibold py-2 px-4 rounded shadow-sm transition"
+            >
+              Join our Discord
+            </UButton>
+          </div>
+          
+          <!-- Michi image -->
+          <img 
+            class="max-w-xs object-scale-down md:ml-6 mt-6 md:mt-0 drop-shadow-lg" 
+            src="~/assets/michi.png" 
             
-            
-            <!-- Have michi above up to date button -->
-            <!-- Note normal tailwind should be targeted to mobile, md focuses on desktop -->
-            <img class=" float-right my-4 max-w-xs object-scale-down " src="~/assets/michi.png" />
+            alt="Michi Mascot"
+          />
+        </div>
+  
+        <!-- Divider -->
+        <UDivider></UDivider>
+  
+        <!-- Additional Links -->
+        <h3 class="text-2xl font-semibold mb-4">Check out our other websites!</h3>
+        <div class=" flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <UButton 
+            to="https://csecnote.utacsec.com"
+            variant="outline"
+            class=" font-medium py-2 px-4 rounded shadow-sm transition"
+          >
+            CSEC-NOTE
+          </UButton>
+          <UButton 
+            to="https://battleground-uta.vercel.app/"
+            variant="outline"
+            class=" font-medium py-2 px-4 rounded shadow-sm transition"
+          >
+            CTF-Playground
+          </UButton>
         </div>
 
+        <!-- Divid to email section -->
+        <UDivider class="py-10"></UDivider>
 
-        <!-- Links to our other sites! -->
-        <h3 class="py-2"> Check out our other websites! </h3>
-        <div class="flex">
-            <UButton to="https://csecnote.utacsec.com">CSEC-NOTE</UButton>
-            <div class="px-4"></div>
-            <UButton to="https://battleground-uta.vercel.app/">CTF-Playground</UButton>
-        </div>
+        <!-- Form to send an email to csec -->
+        <EmailForm></EmailForm>
 
+      </div>
     </div>
-</template>
+  </template>
+  

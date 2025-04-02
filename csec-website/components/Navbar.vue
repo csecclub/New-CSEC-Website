@@ -16,6 +16,11 @@
         to: '/calendar'
     }, 
     {
+        label: 'Blog',
+        icon: 'mdi:pencil-box',
+        to: '/blogs'
+    }, 
+    {
         label: 'Past Events',
         icon: 'material-symbols:calendar-clock',
         to: '/events'
@@ -42,9 +47,11 @@
                     <i :class="link.icon"></i>
                     <!-- Hide text on mobile, show on md and larger screens -->
                     <span class="hidden md:inline group-hover:text-primary relative">{{ link.label }}</span>
+
                 </div>
             </template>
-
+            
         </UHorizontalNavigation>
+        <LightDarkSwitch></LightDarkSwitch>
     </div>
 </template>
