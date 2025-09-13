@@ -6,17 +6,18 @@ export default {
       officers: [
         { name: 'Rose', role: 'President @ CSEC', image: 'csecOfficers/Rose.jpg' },
         { name: 'Betim', role: 'Vice President @ CSEC', image: 'csecOfficers/Betim.jpg' },
-        { name: 'Christian', role: 'Treasuer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Richard', role: 'Treasure Trainee', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Rohita', role: 'Fundraising Director', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Rohita', role: 'Secretary', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Richard', role: 'Treasuer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Nafisa', role: 'Research Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Jeremiah', role: 'Research Officer', image: 'csecOfficers/Jeremiah.jpg' },
-        { name: 'Araohat', role: 'Research Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Tiara', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Summer Barnes', role: 'Event Coordinator', image: 'csecOfficers/SummerBarnes.jpeg' },
-        { name: 'Buzz', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Phillip', role: 'CTF Captain', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Fawaz', role: 'Jr Web Dev', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Safal', role: 'Recuritment Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Wesly', role: 'MemberShip Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Tam', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Phillip', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Maxwell', role: 'Webmaster', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Luke', role: 'Recuritment Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Grace', role: 'Design Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Tobe', role: 'Membership Officer', image: 'csecOfficers/HackerCat.png' },
       ]
     }
   }
