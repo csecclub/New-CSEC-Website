@@ -1,15 +1,12 @@
 <template>
-  <div 
-    v-if="isOldDomain && showBanner"
-    class="domain-banner" 
-    id="domainBanner"
-  >
-    🚨 <strong>We’ve moved!</strong> Our new home is 
-    <a href="https://csec-uta.org/" target="_blank">csec-uta.org</a>.  
-    Please update your bookmarks, this site will be retired soon. 🚨
+  <div class="domain-banner" id="domainBanner">
+        🚨 <strong>We’ve moved!</strong> Our new home is 
+      <a href="https://csec-uta.org/" target="_blank">csec-uta.org</a>.  
+      Please update your bookmarks — this site will be retired soon. 🚨
 
-    <button class="close-btn" @click="closeBanner">&times;</button>
-  </div>
+        <button class="close-btn"
+            onclick="document.getElementById('domainBanner').style.display='none'">&times;</button>
+    </div>
 </template>
 
 <script>
@@ -17,8 +14,6 @@ export default {
   name: "DomainChangeBanner",
   data() {
     return {
-      // check if the current site is the old domain
-      isOldDomain: window.location.hostname === "https://utacsec.com/", 
       showBanner: true
     };
   },
