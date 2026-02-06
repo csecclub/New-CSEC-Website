@@ -4,20 +4,15 @@ export default {
   data() {
     return {
       officers: [
-        { name: 'Rose', role: 'President @ CSEC', image: 'csecOfficers/Rose.jpg' },
-        { name: 'Betim', role: 'Vice President @ CSEC', image: 'csecOfficers/Betim.jpg' },
+        { name: 'Betim', role: 'President', image: 'csecOfficers/Betim.jpg' },
+        { name: 'Tam', role: 'Vice President', image: 'csecOfficers/HackerCat.png' },
         { name: 'Rohita', role: 'Secretary', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Richard', role: 'Treasurer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Nafisa', role: 'Research Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Jeremiah', role: 'Research Officer', image: 'csecOfficers/Jeremiah.jpg' },
-        { name: 'Tiara', role: 'Social Media Officer', image: 'csecOfficers/HackerCat.png' },
+       { name: 'Grace', role: 'Design Officer', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Phillip', role: 'CTF Captain', image: 'csecOfficers/HackerCat.png' },
+        { name: 'Bryan', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Maxwell', role: 'Webmaster', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Bryan', role: 'Web Dev', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Tam', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Phillip', role: 'CTF Officer', image: 'csecOfficers/HackerCat.png' },
         { name: 'Luke', role: 'Recuritment Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Grace', role: 'Design Officer', image: 'csecOfficers/HackerCat.png' },
-        { name: 'Tobe', role: 'Membership Officer', image: 'csecOfficers/HackerCat.png' },
+        
       ]
     }
   }
